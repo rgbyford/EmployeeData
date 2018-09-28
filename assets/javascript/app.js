@@ -30,9 +30,25 @@ $("#submitB").on("click", function (event) {
         dateAdded: firebase.databse.ServerValue.TIMESTAMP
     });
 
+    $("#inputName").val("");
+    $("#inputRole").val("");
+    $("#inputStartDate").val("");
+    $("#inputMonthlyRate").val("");
+
 });
 
 database.ref().on("child_added", function(snapshot){
 
-    
+    var data=snapshot.val();
+
+    console.log(data.name);
+    console.log(data.role);
+    console.log(data.startDate);
+    console.log(data.dataAdded);
+
+   // $("#tableBody").
+        
+
+
+
 })
